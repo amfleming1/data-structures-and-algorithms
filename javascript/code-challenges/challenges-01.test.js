@@ -18,6 +18,8 @@ for(let i=0; i<arr.length; i++) {
   return arr2;
 }
 console.log(addOne);
+
+//DONE
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -30,6 +32,13 @@ const addExclamation = (arr) => {
   // Solution code here...
 };
 
+addExclamation("") 
+  var result = [];
+  strings.forEach(function(string) {
+    result.push(string + "!");
+  });
+  return result;
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -41,6 +50,10 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 const allUpperCase = (arr) => {
   // Solution code here...
 };
+strings.forEach(function(string) {
+  result.push(string.toUpperCase());
+});
+return result;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
