@@ -8,12 +8,15 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
-};
-for (var i = 0; i < Array.length; i++) {
-  var newValue = array[i] + 2;
-  result.push(newValue);
+  const newArray = []
+  for (var i = 0; i < arr.length; i++) {
+    var newValue = arr[i] + 2;
+    newArray.push(newValue);
+  }
+  return newArray;
+
 }
-return result;
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -48,7 +51,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  return arr.filter(n)) => n % 2 !==0);
+  // return arr.filter(n)) => n % 2 !==0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,8 +64,8 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  return.arr.filter((n) => !forbiddenValue.includes(n));
-
+  // return.arr.filter((n) => !forbiddenValue.includes(n));
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
