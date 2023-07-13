@@ -32,13 +32,13 @@ const addExclamation = (arr) => {
   // Solution code here...
 };
 
-addExclamation("") {
+addExclamation("") 
   var result = [];
   strings.forEach(function(string) {
     result.push(string + "!");
   });
   return result;
-}
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
