@@ -30,7 +30,16 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-};
+  addExclamation() {
+    const modifiedArray = [];
+    SVGStringList.forEach(str => {
+      modifiedArray.push(str + "!");
+    });
+
+    return modifiedArray;
+    
+  }
+}
 
 addExclamation("") 
   var result = [];
@@ -49,6 +58,8 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
+
+
 };
 strings.forEach(function(string) {
   result.push(string.toUpperCase());
