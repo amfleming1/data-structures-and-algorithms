@@ -40,6 +40,11 @@ For example: 'Cat' would come before 'apple'
 
 const sortNames = (arr) => {
   // Solution code here...
+  let arr2 = [];
+  arr.forEach ((s) => {
+    arr2.push(s + "!");
+  });
+  return arr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
