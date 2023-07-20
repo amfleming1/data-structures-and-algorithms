@@ -121,8 +121,15 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let returnNames = (arr) => {
+    return arr.reduce((names, character) =>{
+      names.push(character.name);
+      return names;
+    }, []);
+  }
 };
-
+return str.split().reduce((reversed,char)
+=> char + reversed, ");
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
 
