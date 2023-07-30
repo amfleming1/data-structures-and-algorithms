@@ -26,7 +26,15 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-};
+starWarsArr.forEach((character) => {
+character.height = parseInt(character.height);
+  character.height = parseInt(character.height);
+});
+starWarsArr.sort((a, b) => b.height - a.height);
+
+return starWarsArr;
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,7 +43,7 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  // Solution code here...
+   Solution code here...
 };
 
 /* ------------------------------------------------------------------------------------------------
