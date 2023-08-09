@@ -9,6 +9,7 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here...
+  return str.split('').splice(-10);
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -27,6 +28,15 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
+  let max = Number.MIN_SAFE_INTEGER;
+  matrix.forEach((row) => {
+    row.forEach((num) => {
+      if (num > max) {
+        max = num;
+      }
+    });
+  });
+  return max;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,6 +55,13 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let sum = 0;
+  matrix.forEach((row) => {
+    row.forEach((num) => {
+      sum += num;
+    });
+  });
+  return sum;
 };
 
 
@@ -72,6 +89,13 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  const totalSales = Array.from({ length: hoursOpen.length }, () => 0);
+  stores.forEach((store) => {
+    store.forEach((cookiesSold, index) => {
+      totalSales[index] += cookiesSold;
+    });
+  });
+  return totalSales;
 
 };
 
@@ -87,6 +111,11 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  const formattedData = [];
+  data.forEach((cookiesSold, index) => {
+    formattedData.push({ sales: `${cookiesSold} cookies`, time: hours[index] });
+  });
+  return formattedData;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,6 +141,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let treatsQuantity = 0;
+  arr.forEach((errand) => {
+    if (errand.store === 'Pet store') {
+      errand.items.forEach((item) => {
+        if (item.name === 'Treats') {
+          treatsQuantity += item.quantity;
+        }
+      });
+    }
+  });
+  return treatsQuantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -134,6 +174,11 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+  if (board[row] && board[row][col]) {
+    return board[row][col] === '#' ? 'hit' : 'miss';
+  }
+  return 'miss';
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -146,7 +191,8 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   // Solution code here...
-};
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
