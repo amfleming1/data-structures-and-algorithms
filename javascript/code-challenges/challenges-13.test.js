@@ -72,6 +72,9 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  const validateEmail = (email) => {
+    const pattern = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@[a-zA-Z0-9]+\.(com|net|org)$/;
+    return pattern.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,6 +85,9 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  const validatePhoneNumber = (phoneNumber) => {
+    const pattern = /^(\(\d{3}\)\s?\d{3}-\d{4}|\d{3}\s?\d{3}-\d{4}|\d{3}-\d{7}|\d{3}-\d{3}\s?\d{4}|\d{10})$/;
+    return pattern.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
