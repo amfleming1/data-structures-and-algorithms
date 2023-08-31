@@ -57,6 +57,9 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
+  const hasNumber = (string) => {
+    const pattern = /^[a-zA-Z]+\d+$/;
+    return pattern.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -77,6 +80,9 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 
 const validateEmail = (email) => {
   // Solution code here...
+  const validateEmail = (email) => {
+    const pattern = /^[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)?@[a-zA-Z0-9]+\.(com|net|org)$/;
+    return pattern.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,6 +108,9 @@ Return either true or false.
 
 const validatePhoneNumber = (phoneNumber) => {
   // Solution code here...
+  const validatePhoneNumber = (phoneNumber) => {
+    const pattern = /^(\(\d{3}\)\s?\d{3}-\d{4}|\d{3}\s?\d{3}-\d{4}|\d{3}-\d{7}|\d{3}-\d{3}\s?\d{4}|\d{10})$/;
+    return pattern.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -115,6 +124,7 @@ findTagNames(['<div><h1>Hello, world!</h1></div>', '<p>Welcome to my site</p>'])
 
 const findTagNames = elements => {
   // Solution code here...
+  // stretch goal
 };
 
 /* ------------------------------------------------------------------------------------------------
