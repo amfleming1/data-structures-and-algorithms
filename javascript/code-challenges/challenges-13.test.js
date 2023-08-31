@@ -3,13 +3,20 @@
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named longestString that takes in an array of strings and returns the index position of the longest string. 
+Write a function named longestString that takes in an array of strings and returns the index position of the longest string.
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
 // Solution code here...
+const replaceZeros = (string) => {
+return string.replace(/0/g, 'zero');
 };
-  
+
+const exampleString = '10203 is a number with zeros';
+const result = replaceZeros(exampleString);
+
+};
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -20,6 +27,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  const validatePin = (pin) => {
+    const pattern = /^\d{4}$/;
+    return pattern.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -32,6 +42,9 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  const validateWord = (word) => {
+    const pattern = /^.{5,10}$/;
+    return pattern.test(word);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,10 +57,13 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  const hasNumber = (string) => {
+    const pattern = /^[a-zA-Z]+\d+$/;
+    return pattern.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named onlyOddChars that takes in a string and returns only the odd-index characters from that string.
 
@@ -59,7 +75,7 @@ const onlyOddChars = (str) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
